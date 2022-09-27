@@ -1,0 +1,176 @@
+Ques 1-Find all of the numbers from 1-1000 that are divisible by 7
+
+####### Method 1 #######
+list1 = []
+def divisible(number):
+    if number%7==0:
+        return number
+for i in range(1,1001):
+    num1 = divisible(i)
+    if num1:
+        list1.append(num1)
+print(list1)
+
+
+
+####### Method 2 #######
+    
+divisible_7 = [x for x in range(1,1001) if x%7==0]
+print(divisible_7)
+
+####### Method 3 #######
+
+divisible_7a = list(filter(lambda x: x%7==0,list(range(1,1001))))
+print(divisible_7a)
+
+-----------------------------------------------------------------------------------
+
+Ques 2-Find all of the numbers from 1-1000 that have a 3 in them
+
+####### Method 1 #######
+list1 = []
+def item(number):
+    if '3' in str(number):
+        return number
+for i in range(1,1001):
+    num1 = item(i)
+    if num1:
+        list1.append(num1)
+print(list1)
+####### Method 2 #######
+
+item_3 = [x for x in range(1,1001) if '3' in str(x)]
+####### Method 3 #######
+item_3a = list(filter(lambda x: '3' in str(x),list(range(1,1001))))
+print(item_3a)
+
+
+---------------------------------------------------------------------------
+
+Ques 3-Count the number of spaces in a string
+
+# 1
+n=0
+string = input("Enter string")
+for i in string:
+    if i==' ':
+        n+=1
+print(n)
+
+
+
+# 2
+a = len([i for i in string if i==' '])
+print(a)
+
+
+# 3
+b = len(list(map(lambda x: x==' ',string)))
+print(b)
+
+--------------------------------------------------------------------------------
+
+Ques 4-Remove all of the vowels in a string
+
+# 1
+string = input("Enter string")
+vowels = "aeiou"
+remain = []
+for i in string:
+    if i not in vowels:
+        remain.append(i)
+a = "".join(remain)
+print(a)
+
+
+# 2
+remain = [i for i in string if i not in vowels]
+print("".join(remain))
+
+
+# 3
+
+a = list(filter(lambda x:x
+ not in vowels,string))
+print("".join(a))
+
+-----------------------------------------------------------------------------------
+
+Ques 5-Find all of the words in a string that are less than 4 letters
+
+# 1
+string = input("Enter a string").split()
+output = []
+for i in string:
+    if len(i) <4:
+        output.append(i)
+# 2 
+output =[i for i in string if len(i)<4]
+print(output)
+
+# 3
+
+a = list(filter(lambda x:len(x)<4),string)
+print(a)   
+
+
+-------------------------------------------------------------------------------------
+
+Ques 6-A list of all consonants in the sentence 'The quick brown fox jumped over the lazy dog'
+
+# 1
+string = 'The quick brown fox jumped over the lazy dog'
+vowels = "aeiou "
+consonants=[]
+for i in string:
+    if i not in vowels:
+        consonants.append(i)
+
+# 2
+a = [i for i in string if i not in vowels]
+print(a)
+
+# 3
+
+b = list(filter(lambda x:x
+ not in vowels,string))
+print(b)
+
+
+------------------------------------------------------------------------------------------------
+
+Ques 7-A list of all the capital letters (and not white space) in 'The Quick Brown Fox Jumped Over The Lazy Dog'
+
+# 1
+string = 'The Quick Brown Fox Jumped Over The Lazy Dog'
+capital = []
+for i in string:
+    if i==i.upper() and i!=' ':
+        capital.append(i)
+        
+# 2
+capital = [i for i in string if i==i.upper() if i!=' ']  
+
+# 3
+b = list(filter(lambda x:x==x.upper() and x!=' ',string))
+print(b)
+
+-----------------------------------------------------------------------------------------------
+
+Ques 8-A list of all square numbers formed by squaring the numbers from 1 to 1000.
+
+# 1
+square = []
+for i in range(1,1000):
+    a = i**2
+    if a<1000:
+        square.append(a)
+    else:
+        break
+# 2
+square = [i**2  for i in range(1,1000) if i**2<1000]
+# 3
+square = list(map(lambda y:y**2,filter(lambda z :z**2<1000,list(range(0,1000)))))
+
+
+--------------------------------------------------------------------------------------------

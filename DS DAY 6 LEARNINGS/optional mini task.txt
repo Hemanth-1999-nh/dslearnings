@@ -1,0 +1,33 @@
+"""
+  Write a program to perform a basic ‘Ceaser’ encryption and decryption on text.
+  This algorithm works by moving letters along by an ‘offset’. 
+  If the offset is 2 then b —> d, h—>j etc.
+  Try to write two functions—One called ‘encrypt’ and one called 'decrypt'. 
+  Both will return a string.
+  The user selects whether the wish to encrypt or decrypt.
+  The user enters sentence to encrypt and the encryption key (i.e.
+  How many we move the letters along—this is a smallish integer)
+  The program responds with the encrypted or decrypted version
+
+Algorithm for encryption
+  Type in text
+  Type in encryption key
+  Display Encrypt(text, key)
+  function Encrypt(text,key)
+  For each letter in text
+  Get its ascii code
+  Add the key to the ascii code
+  Turn this new ascii code back to a character
+  Append character to ciphertext string
+  End for
+  return ciphertext
+  end
+
+Hints
+  To get a single character from a string of characters just add position in brackets after string name.
+  Text=“Hello”
+  Text(0)=“H”
+  Len(Text) or Text.length
+  will give you the number of
+  characters in string.
+"""
